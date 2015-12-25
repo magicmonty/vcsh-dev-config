@@ -1,0 +1,50 @@
+[user]
+	email = magicmonty@pagansoft.de
+	name = Martin Gondermann
+[core]
+	excludesfile = /Users/martingondermann/.gitignore_global
+	editor = /usr/local/bin/vim
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[difftool "bc3"]
+  cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
+  trustExitCode = true
+
+[mergetool "bc3"]
+  cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+  trustExitCode = true
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
+
+[push]
+	default = current
+
+[diff]
+	tool = bc3
+
+[merge]
+  tool = bc3
+
+[hub]
+protocol = https
+
+[alias]
+co = checkout
+br = branch
+who = shortlog -s --
+df = diff
+st = status
+ci = commit
+lg = log -p
+hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+type = cat-file -t
+dump = cat-file -p
+
