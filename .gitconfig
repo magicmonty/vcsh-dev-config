@@ -6,11 +6,11 @@
 	editor = /usr/local/bin/vim
 
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	cmd = /Users/martingondermann/bin/bcomp \"$LOCAL\" \"$REMOTE\"
+	path = -ro
 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Users/martingondermann/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 	trustExitCode = true
 
 [difftool "bc3"]
@@ -22,7 +22,7 @@
   trustExitCode = true
 
 [credential]
-helper = /opt/boxen/bin/boxen-git-credential
+	helper = osxkeychain
 
 [push]
 	default = current
