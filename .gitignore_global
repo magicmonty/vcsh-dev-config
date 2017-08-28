@@ -6,6 +6,5 @@ bin
 ntest/obj
 obj
 packages
-paket.exe
 deploy
 *.log
